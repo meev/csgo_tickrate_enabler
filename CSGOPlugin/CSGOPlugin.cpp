@@ -112,7 +112,6 @@ bool CSGOPlugin::Load(CreateInterfaceFn interfaceFactory, CreateInterfaceFn game
 	DWORD* pdwServerGameDll = (DWORD*)*(DWORD*)g_pServerGameDll;
 	pGetTickInterval = (tGetTickInterval)DetourFunction((PBYTE)pdwServerGameDll[9], (PBYTE)new_GetTickInterval);
 
-	Warning("\n\n--------------------CSGO Tickrate Enabler Loaded---------------------\n\n\n");
 	return true;
 }
 
